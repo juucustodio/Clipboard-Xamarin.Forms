@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Clipboard;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,5 +14,12 @@ namespace ClipboardDemo
 		{
 			InitializeComponent();
 		}
-	}
+
+        private async void Copy(object sender, EventArgs e)
+        {
+            CrossClipboard.Current.SetText(Mensagem.Text);
+            
+           await DisplayAlert("Atenção", "O Texto \"" + CrossClipboard.Current.GetText() + "\" foi copiado.", "OK");
+        }
+    }
 }

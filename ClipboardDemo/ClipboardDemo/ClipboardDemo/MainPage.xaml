@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:ClipboardDemo"
              x:Class="ClipboardDemo.MainPage">
-
+    <ContentPage.Content>
     <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Entry x:Name="Mensagem"/>
+        <Button  Text="Copiar" Clicked="Copy"/>
     </StackLayout>
+    </ContentPage.Content>
 
 </ContentPage>
